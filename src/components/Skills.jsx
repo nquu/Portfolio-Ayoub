@@ -53,7 +53,7 @@ export default function Skills() {
     <Section id="skills" className="bg-zinc-100/60 dark:bg-zinc-900/40">
       <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {groups.map((group, index) => (
           <SkillGroup key={group.title} group={group} index={index} />
         ))}
