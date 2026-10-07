@@ -11,7 +11,7 @@ export default {
   hero: {
     badge: 'Beschikbaar voor nieuwe projecten',
     greeting: 'Hoi, ik ben',
-    roles: ['C# / .NET Developer', 'Backend Developer', 'Aankomend Pentester', 'Reverse Engineering hobbyist'],
+    roles: ['C# / .NET Developer', 'Backend Developer', 'Security-minded Engineer', 'Full-stack als het moet'],
     intro:
       "Backend developer met C# en .NET als thuisbasis. Ik bouw API's, services en applicaties die stabiel draaien, en kijk daarbij altijd met een security-bril.",
     cta: 'Bekijk projecten',
@@ -23,25 +23,24 @@ export default {
     title: 'Backend eerst, security altijd in het achterhoofd',
     bio: [
       "Ik ben Ayoub, C# en .NET developer. Mijn hart ligt bij de backend: API's, datamodellen, services en de logica die alles laat draaien. Daar voel ik me het meest thuis en daar bouw ik het liefst aan. Ik heb genoeg front-end achtergrond om een hele feature op te leveren, van endpoint tot scherm, maar de backend is waar ik het verschil maak.",
-      'Daarnaast zit ik steeds dieper in security. Ik wil weten hoe systemen van binnen werken en waar ze breken: reverse engineering met IDA en x64dbg, Windows internals, binaire analyse. Pentesting is de richting waar ik naartoe werk. Ik leer het snelst door zelf te bouwen, dingen te slopen en ze beter terug te zetten.',
+      'Daarnaast kijk ik steeds vaker door een security-bril naar wat ik bouw. Waar zitten de zwakke plekken, hoe ga je om met input, auth en data, en hoe maak je iets dat niet zomaar omvalt? Dat is de kant waar ik me verder in wil verdiepen. Ik leer het snelst door zelf te bouwen, dingen te slopen en ze beter terug te zetten.',
     ],
     stats: [
       { label: 'Focus', value: '.NET' },
       { label: 'Programmeertalen', value: '6+' },
       { label: 'Productie-projecten', value: '2+' },
-      { label: 'Richting', value: 'Pentest' },
+      { label: 'Security mindset', value: '24/7' },
     ],
   },
 
   skills: {
     eyebrow: '02 — Skills',
     title: 'Waar ik mee werk',
-    subtitle: 'Backend als zwaartepunt, security als verdieping, front-end waar het nodig is.',
+    subtitle: 'Backend als zwaartepunt, front-end waar het nodig is.',
     groups: [
       { title: 'Backend (kern)', items: ['C#', '.NET', 'ASP.NET Core', "REST API's", 'Blazor (Razor)', 'SQL'] },
       { title: 'Overige talen', items: ['C++', 'C', 'Python', 'JavaScript', 'Dart'] },
       { title: 'Front-end & overig', items: ['React', 'TailwindCSS', 'HTML / CSS', 'Flutter', 'Electron'] },
-      { title: 'Security & low-level', items: ['Reverse engineering', 'IDA', 'x64dbg', 'x86 / x64 assembly', 'Windows internals', 'Windows API', 'Binaire analyse', 'Pentesting (in opbouw)'] },
     ],
     languages: [
       { name: 'Nederlands', level: 'Moedertaal', percentage: 100 },
