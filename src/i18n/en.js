@@ -1,17 +1,19 @@
 export default {
-  nav: { over: 'About', skills: 'Skills', ervaring: 'Experience', projecten: 'Projects', contact: 'Contact', theme: 'Toggle theme' },
-
-  profile: {
-    name: 'Ayoub Guebli',
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/nquu',
+  nav: {
+    over: 'About',
+    skills: 'Skills',
+    ervaring: 'Experience',
+    projecten: 'Projects',
+    contact: 'Contact',
+    theme: 'Toggle theme',
   },
 
   hero: {
     badge: 'Open to new projects',
     greeting: "Hi, I'm",
     roles: ['C# / .NET Developer', 'Backend Developer', 'Security-minded Engineer', 'Full-stack when needed'],
-    intro: 'Backend developer with C# and .NET as home turf. I build APIs, services and applications that run reliably, always with a security mindset.',
+    intro:
+      'Backend developer with C# and .NET as home turf. I build APIs, services and applications that run reliably, always with a security mindset.',
     cta: 'View projects',
     contact: 'Contact',
   },
@@ -29,21 +31,20 @@ export default {
       { label: 'Production projects', value: '2+' },
       { label: 'Security mindset', value: '24/7' },
     ],
-    education: null,
   },
 
   skills: {
     eyebrow: '02 — Skills',
     title: 'What I work with',
-    sub: 'Backend as the core, front-end where it is needed.',
+    subtitle: 'Backend as the core, front-end where it is needed.',
     groups: [
-      { group: 'Backend (core)', items: ['C#', '.NET', 'ASP.NET Core', 'REST APIs', 'Blazor (Razor)', 'SQL'] },
-      { group: 'Other languages', items: ['C++', 'C', 'Python', 'JavaScript', 'Dart'] },
-      { group: 'Front-end & more', items: ['React', 'TailwindCSS', 'HTML / CSS', 'Flutter', 'Electron'] },
+      { title: 'Backend (core)', items: ['C#', '.NET', 'ASP.NET Core', 'REST APIs', 'Blazor (Razor)', 'SQL'] },
+      { title: 'Other languages', items: ['C++', 'C', 'Python', 'JavaScript', 'Dart'] },
+      { title: 'Front-end & more', items: ['React', 'TailwindCSS', 'HTML / CSS', 'Flutter', 'Electron'] },
     ],
     languages: [
-      { name: 'Dutch', level: 'Native', pct: 100 },
-      { name: 'English', level: 'Proficient', pct: 80 },
+      { name: 'Dutch', level: 'Native', percentage: 100 },
+      { name: 'English', level: 'Proficient', percentage: 80 },
     ],
   },
 
@@ -82,14 +83,14 @@ export default {
     eyebrow: '05 — Projects',
     title: 'Things I have built',
     all: 'All',
-    cats: { Web: 'Web', Desktop: 'Desktop', Mobile: 'Mobile' },
+    categories: { Web: 'Web', Desktop: 'Desktop', Mobile: 'Mobile' },
     items: [],
   },
 
   contact: {
     eyebrow: '04 — Contact',
     title: "Let's work together",
-    sub: 'Looking for a .NET developer? Feel free to reach out.',
+    subtitle: 'Looking for a .NET developer? Feel free to reach out.',
     form: {
       name: 'Name',
       email: 'Email address',
@@ -99,9 +100,10 @@ export default {
       sent: 'Sent, I will get back to you soon.',
       error: 'Sending failed. Please try again later.',
     },
-    labels: { linkedin: 'LinkedIn', github: 'GitHub' },
-    linkedinValue: 'View profile',
-    githubValue: 'Repositories',
+    social: {
+      linkedin: { label: 'LinkedIn', value: 'View profile' },
+      github: { label: 'GitHub', value: 'Repositories' },
+    },
   },
 
   footer: 'Built with React, TailwindCSS & Framer Motion',

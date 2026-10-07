@@ -1,17 +1,19 @@
 export default {
-  nav: { over: 'Over', skills: 'Skills', ervaring: 'Ervaring', projecten: 'Projecten', contact: 'Contact', theme: 'Thema wisselen' },
-
-  profile: {
-    name: 'Ayoub Guebli',
-    linkedin: 'https://www.linkedin.com/',
-    github: 'https://github.com/nquu',
+  nav: {
+    over: 'Over',
+    skills: 'Skills',
+    ervaring: 'Ervaring',
+    projecten: 'Projecten',
+    contact: 'Contact',
+    theme: 'Thema wisselen',
   },
 
   hero: {
     badge: 'Beschikbaar voor nieuwe projecten',
     greeting: 'Hoi, ik ben',
     roles: ['C# / .NET Developer', 'Backend Developer', 'Security-minded Engineer', 'Full-stack als het moet'],
-    intro: "Backend developer met C# en .NET als thuisbasis. Ik bouw API's, services en applicaties die stabiel draaien, en kijk daarbij altijd met een security-bril.",
+    intro:
+      "Backend developer met C# en .NET als thuisbasis. Ik bouw API's, services en applicaties die stabiel draaien, en kijk daarbij altijd met een security-bril.",
     cta: 'Bekijk projecten',
     contact: 'Contact',
   },
@@ -29,21 +31,20 @@ export default {
       { label: 'Productie-projecten', value: '2+' },
       { label: 'Security mindset', value: '24/7' },
     ],
-    education: null,
   },
 
   skills: {
     eyebrow: '02 — Skills',
     title: 'Waar ik mee werk',
-    sub: 'Backend als zwaartepunt, front-end waar het nodig is.',
+    subtitle: 'Backend als zwaartepunt, front-end waar het nodig is.',
     groups: [
-      { group: 'Backend (kern)', items: ['C#', '.NET', 'ASP.NET Core', "REST API's", 'Blazor (Razor)', 'SQL'] },
-      { group: 'Overige talen', items: ['C++', 'C', 'Python', 'JavaScript', 'Dart'] },
-      { group: 'Front-end & overig', items: ['React', 'TailwindCSS', 'HTML / CSS', 'Flutter', 'Electron'] },
+      { title: 'Backend (kern)', items: ['C#', '.NET', 'ASP.NET Core', "REST API's", 'Blazor (Razor)', 'SQL'] },
+      { title: 'Overige talen', items: ['C++', 'C', 'Python', 'JavaScript', 'Dart'] },
+      { title: 'Front-end & overig', items: ['React', 'TailwindCSS', 'HTML / CSS', 'Flutter', 'Electron'] },
     ],
     languages: [
-      { name: 'Nederlands', level: 'Moedertaal', pct: 100 },
-      { name: 'Engels', level: 'Goede beheersing', pct: 80 },
+      { name: 'Nederlands', level: 'Moedertaal', percentage: 100 },
+      { name: 'Engels', level: 'Goede beheersing', percentage: 80 },
     ],
   },
 
@@ -82,14 +83,14 @@ export default {
     eyebrow: '05 — Projecten',
     title: 'Dingen die ik gebouwd heb',
     all: 'Alle',
-    cats: { Web: 'Web', Desktop: 'Desktop', Mobile: 'Mobile' },
+    categories: { Web: 'Web', Desktop: 'Desktop', Mobile: 'Mobile' },
     items: [],
   },
 
   contact: {
     eyebrow: '04 — Contact',
     title: 'Laten we samenwerken',
-    sub: 'Op zoek naar een .NET developer? Stuur gerust een bericht.',
+    subtitle: 'Op zoek naar een .NET developer? Stuur gerust een bericht.',
     form: {
       name: 'Naam',
       email: 'E-mailadres',
@@ -99,9 +100,10 @@ export default {
       sent: 'Verstuurd, ik neem snel contact op.',
       error: 'Versturen is mislukt. Probeer het later opnieuw.',
     },
-    labels: { linkedin: 'LinkedIn', github: 'GitHub' },
-    linkedinValue: 'Profiel bekijken',
-    githubValue: 'Repositories',
+    social: {
+      linkedin: { label: 'LinkedIn', value: 'Profiel bekijken' },
+      github: { label: 'GitHub', value: 'Repositories' },
+    },
   },
 
   footer: 'Gebouwd met React, TailwindCSS & Framer Motion',

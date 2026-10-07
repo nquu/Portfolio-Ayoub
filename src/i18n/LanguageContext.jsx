@@ -1,31 +1,33 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { readStorage, writeStorage } from '../lib/storage'
 import nl from './nl'
 import en from './en'
 
-const dict = { nl, en }
-const LanguageContext = createContext({ lang: 'nl', t: nl, setLang: () => {} })
+const STORAGE_KEY = 'lang'
+const translations = { nl, en }
+export const SUPPORTED_LANGUAGES = Object.keys(translations)
 
-export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => {
-    try {
-      const saved = localStorage.getItem('lang')
-      if (saved === 'nl' || saved === 'en') return saved
-    } catch {
-      /* ignore */
-    }
-    return navigator.language?.startsWith('nl') ? 'nl' : 'en'
-  })
+const LanguageContext = createContext({ language: 'nl', t: nl, setLanguage: () => {} })
 
-  useEffect(() => {
-    document.documentElement.lang = lang
-    try {
-      localStorage.setItem('lang', lang)
-    } catch {
-      /* ignore */
-    }
-  }, [lang])
-
-  return <LanguageContext.Provider value={{ lang, t: dict[lang], setLang }}>{children}</LanguageContext.Provider>
+function detectLanguage() {
+  const saved = readStorage(STORAGE_KEY)
+  if (SUPPORTED_LANGUAGES.includes(saved)) return saved
+  return navigator.language?.startsWith('nl') ? 'nl' : 'en'
 }
 
-export const useLang = () => useContext(LanguageContext)
+export function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState(detectLanguage)
+
+  useEffect(() => {
+    document.documentElement.lang = language
+    writeStorage(STORAGE_KEY, language)
+  }, [language])
+
+  const value = { language, t: translations[language], setLanguage }
+
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+}
+
+export function useLanguage() {
+  return useContext(LanguageContext)
+}

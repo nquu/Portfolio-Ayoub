@@ -8,7 +8,7 @@ export function Section({ id, children, className = '' }) {
   )
 }
 
-export function Heading({ eyebrow, title, sub }) {
+export function SectionHeading({ eyebrow, title, subtitle }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -19,16 +19,7 @@ export function Heading({ eyebrow, title, sub }) {
     >
       <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
       <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{title}</h2>
-      {sub && <p className="mt-3 max-w-2xl text-zinc-500 dark:text-zinc-400">{sub}</p>}
+      {subtitle && <p className="mt-3 max-w-2xl text-zinc-500 dark:text-zinc-400">{subtitle}</p>}
     </motion.div>
   )
-}
-
-export const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' },
-  }),
 }
